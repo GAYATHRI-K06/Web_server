@@ -43,7 +43,9 @@ class hellohandler(baseHTTPRequesthandler):
              self.send_header('content-type', 'text/html; charset=utf-8')
              self.end_headers()
              self.wfile.write(content.encode())
-             server_address = ('',80)
+
+
+server_address = ('',80)
 httpd=HTTPserver(server_address, hellohandler)
 httpd.server_forever()
 # OUTPUT:
